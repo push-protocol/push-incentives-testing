@@ -96,7 +96,7 @@ function ViewDelegateeItem({ delegateeObject, epnsToken, signerObject, pushBalan
     postReq('/gov/prev_delegation',{"walletAddress": account}).then(res=>{
       console.log("result",res.data.user)
       setGaslessInfo(res.data.user);
-      toast.dark("Successfully Delegated!", {
+      toast.dark("Successfully Fetched Prev Delegation!", {
         position: "bottom-right",
         type: toast.TYPE.SUCCESS,
         autoClose: 5000,
