@@ -70,7 +70,7 @@ function Delegate({ epnsReadProvider, epnsWriteProvide }) {
         setGaslessInfo(res.data.user);
       }
       )
-  },[gaslessInfo]);
+  },[]);
   React.useEffect(() => {
     if (account && account != '') {
       // Check if the address is the same
@@ -418,9 +418,9 @@ function Delegate({ epnsReadProvider, epnsWriteProvide }) {
 
                   <Item self="stretch" align="flex-end">
                     <ItemH>
-                    <RadioGroup >
+                   <RadioGroup >
                     <div>
-                    <input type="radio" id="gasless" checked   name="gasless" value="gasless" onChange={e=>setTransactionMode(e.target.value)}/> <br/>
+                    <input type="radio" id="gasless"    name="gasless" value="gasless" onChange={e=>setTransactionMode(e.target.value)}/> <br/>
                     <Label>Gasless </Label><br/>
                     </div>
                     <div>
